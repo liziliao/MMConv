@@ -3,23 +3,19 @@ This is code of model for Joint Model across Multiple Tasks  [SimpleTOD](https:/
 It corresponds to model in article *MMConv: an Environment for Multimodal Conversational Search across Multiple Domains*, section 5.4. To reproduce results shown in paper, follow the steps below:
 
 ### input generation
-```python generate_inputs.py
-```
+```python generate_inputs.py```
 The preprocessed inputs will be stored in folder /resources .
 
 ### model training
-```sh train_multitask.sh $CUDA_VISIBLE_DEVICES $MODEL $MODEL_NAME $BATCH
-```
+```sh train_multitask.sh $CUDA_VISIBLE_DEVICES $MODEL $MODEL_NAME $BATCH```
 
 You need to assign parameters above in the very sequence. Particularly, make sure $nproc_per_node, the number of GPUs used when training parallelly is not larger than number of $CUDA_VISIBLE_DEVICES. $MODEL is the name of model group used as backbone, and $MODEL_NAME is the name of specific model or the path to that model predownloaded.
 
 One runnable example is like this:
-```sh train_multitask.sh 0,1,2,3 gpt2 gpt2 4
-```
+```sh train_multitask.sh 0,1,2,3 gpt2 gpt2 4```
 
 ### model evaluation
-```python eval_simpletod.py $MODEL $BATCH $checkpoint
-```
+```python eval_simpletod.py $MODEL $BATCH $checkpoint```
 Here $checkpoint is one of model folder saved in ./checkpoints.
 
 Or simply run eval_simpletod.ipynb and assign  checkpoint number in the script.
