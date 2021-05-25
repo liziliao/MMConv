@@ -7,7 +7,8 @@ Authors: [Lizi Liao](https://scholar.google.com.sg/citations?user=W2b08EUAAAAJ&h
 ## Introduction
 This work introduces a Multimodal Multi-domain Conversational search (MMConv) environment. It provides a large-scale multi-turn conversational corpus with dialogues spanning across several domains and modalities. Along which, there are also paired real user settings, structured venue database, annotated image repository as well as crowd-sourced knowledge base. More importantly, each dialogue is fully annotated with a sequence of dialogue belief states and corresponding system dialogue acts which is scarce in existing multimodal conversation corpora. 
 
-MMConv can be used to develop individual system modules for conversational search following task-oriented dialogue research. On the otherhand, with over 5k fully annotated dialogues, MMConv also enables researchers to carry on end-to-end conversational modelling experiments. Accordingly, we provide a set of bench-marking results using current SOTA methods for various tasks, which may facilitate a lot of exciting ongoing research in the area.
+MMConv can be used to develop individual system modules for conversational search following task-oriented dialogue research. On the other
+hand, with over 5k fully annotated dialogues, MMConv also enables researchers to carry on end-to-end conversational modelling experiments. Accordingly, we provide a set of bench-marking results using current SOTA methods for various tasks, which may facilitate a lot of exciting ongoing research in the area.
 
  
 
@@ -69,4 +70,4 @@ We organize the codes into separate folders for them. More details for training 
 
 
 ## License
-The code is released under the MIT License - see [LICENSE](LICENSE.txt) for details
+The code is released under the MIT License - see [LICENSE](LICENSE) for details
