@@ -59,7 +59,7 @@ print('Batch size for evaluation: {}'.format(BATCH_SIZE_EVAL))
 workers_eval = max(min(8, BATCH_SIZE_EVAL >> 3), 4)
 
 
-paths = ['resources/test_simpletod']   
+paths = ['./resources/test.simpletod']   
 test = MMDialDataset.create_data(paths, transformer_model, split=(1,), shuffle=False)
 
 first = {

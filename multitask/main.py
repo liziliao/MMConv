@@ -78,10 +78,10 @@ def get_model_tokenizer(args):
         )
 
     if args.block_size <= 0:
-        args.block_size = tokenizer.max_len
+        args.block_size = tokenizer.max_len_single_sentence
         # Our input block size will be the max possible for the model
     else:
-        args.block_size = min(args.block_size, tokenizer.max_len)
+        args.block_size = min(args.block_size, tokenizer.tokenizer.max_len)
 
     if args.model_name_or_path:
         model = model_class.from_pretrained(
@@ -187,7 +187,7 @@ def train_epoch(model, tokenizer, optimizer, scheduler, train_dataloader, tr_los
             # save checkpoint
             if args.local_rank in [-1, 0] and args.save_steps > 0 and global_step % args.save_steps == 0:
                 if args.evaluate_during_training:
-                    save_checkpoint(model, optimizer, scheduler, tokenizer, global_step, args)
+                    save_checkpoint(model, optimizer, scheduler, tokenizer, args, global_step)
 
         if args.max_steps > 0 and global_step > args.max_steps:
             epoch_iterator.close()
@@ -200,8 +200,6 @@ def train(args, train_dataset, model, tokenizer):
     """ Train the model """
     if args.local_rank in [-1, 0]:
         tb_writer = SummaryWriter('./runs/{}'.format(args.output_dir.split('/')[-1]))
-    else:
-        tb_writer = None
 
     # Prepare dataloader
     train_dataloader, args = get_dataloader(train_dataset, tokenizer, args)
@@ -345,7 +343,7 @@ def main():
     else:  # initialize distributed training
         torch.cuda.set_device(args.local_rank)
         device = torch.device("cuda", args.local_rank)
-        torch.distributed.init_process_group(backend="nccl", init_method='env://')
+        torch.distributed.init_process_group(backend="nccl")
         args.n_gpu = 1
     args.device = device
 

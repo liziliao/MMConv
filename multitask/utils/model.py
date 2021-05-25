@@ -1,11 +1,3 @@
-'''
-Author: your name
-Date: 2021-05-08 22:57:24
-LastEditTime: 2021-05-08 22:57:25
-LastEditors: your name
-Description: In User Settings Edit
-FilePath: /mmdial_models/simpletod/utils/model.py
-'''
 
 import torch
 import glob
@@ -15,7 +7,6 @@ from typing import Dict, List, Tuple
 import os
 import shutil
 import logging
-import re
 logger = logging.getLogger(__name__)
 
 
@@ -63,7 +54,7 @@ def _rotate_checkpoints(args, checkpoint_prefix="checkpoint", use_mtime=False):
         shutil.rmtree(checkpoint)
 
 
-def save_checkpoint(model, optimizer, scheduler, tokenizer, global_step, args):
+def save_checkpoint(model, optimizer, scheduler, tokenizer, args, global_step):
     checkpoint_prefix = "checkpoint"
     # Save model checkpoint
     output_dir = os.path.join(args.output_dir, "{}-{}".format(checkpoint_prefix, global_step))

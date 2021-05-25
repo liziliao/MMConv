@@ -3,20 +3,23 @@ This is code of model for Joint Model across Multiple Tasks  [SimpleTOD](https:/
 It corresponds to model in article *MMConv: an Environment for Multimodal Conversational Search across Multiple Domains*, section 5.4. To reproduce results shown in paper, follow the steps below:
 
 ### input generation
-```run the blocks in generate_inputs.ipynb```
-
+```python generate_inputs.py
+```
 The preprocessed inputs will be stored in folder /resources .
 
 ### model training
-```sh train_mmdial.sh $CUDA_VISIBLE_DEVICES $nproc_per_node $MODEL $MODEL_NAME $BATCH $save_total_limit```
+```sh train_multitask.sh $CUDA_VISIBLE_DEVICES $MODEL $MODEL_NAME $BATCH
+```
 
-You need to assign parameters above in the very sequence. Particularly, make sure $nproc_per_node, the number of GPUs used when training parallelly is not larger than number of $CUDA_VISIBLE_DEVICES. $MODEL is the name of model group used as backbone, and $MODEL_NAME is the name of specific model or the path to that model predownloaded. $save_total_limit is the number of maximum checkpoints saved in sliding updating manner.
+You need to assign parameters above in the very sequence. Particularly, make sure $nproc_per_node, the number of GPUs used when training parallelly is not larger than number of $CUDA_VISIBLE_DEVICES. $MODEL is the name of model group used as backbone, and $MODEL_NAME is the name of specific model or the path to that model predownloaded.
 
 One runnable example is like this:
-```sh train_mmdial.sh 0,1,2,3 4 gpt2 ./example_model 2 5```
+```sh train_multitask.sh 0,1,2,3 gpt2 gpt2 4
+```
 
 ### model evaluation
-```python generate_simpletod.py $MODEL $BATCH $checkpoint```
+```python eval_simpletod.py $MODEL $BATCH $checkpoint
+```
+Here $checkpoint is one of model folder saved in ./checkpoints.
 
-Here $checkpoint is one of model files saved in ./checkpoints. Note the numbers within name of checkpoint files are global steps trained till the checkpoint in **main process** only.
-
+Or simply run eval_simpletod.ipynb and assign  checkpoint number in the script.
