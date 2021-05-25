@@ -1,4 +1,4 @@
-# Joint Model across Multiple Tasks
+# Multimodal Dialogue State Tracking
 This is code of model for Dialogue State Tracking task  [DS-DST](https://arxiv.org/abs/1910.03544).
 It corresponds to model in article *MMConv: an Environment for Multimodal Conversational Search across Multiple Domains*, section 5.1. To reproduce results shown in paper, follow the steps below:
 
