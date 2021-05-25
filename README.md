@@ -40,7 +40,7 @@ This section explains steps to preprocess MMConv dataset and training the model.
 ### Preprocessing: 
 It includes performing delexicaliztion, and creating dataset for various tasks.
 ```
-python generate_inputs.py
+run the blocks in generate_inputs.ipynb inside each method's folder
 ```
 For example, for the multitask benchmark, each dialogue turn will be represented as a sequence, which contains previous user/system turns, belief, action, and delexicalized response
 
