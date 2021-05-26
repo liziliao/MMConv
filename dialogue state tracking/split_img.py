@@ -3,10 +3,9 @@ import random
 import numpy as np
 from utils.json_utils import load
 
-img_classes = load('image_classes.json')                                                                                # print(img_classes)
+img_classes = load('./image_classes.json')                                                                                # print(img_classes)
 img2class = {v: k for k, vs in img_classes.items() for v in vs}
 
-# img_root = '/storage/longhl/mmdial_models'
 img_root = ''
 all_imgs = {file: os.path.join(root, file) for root, _, files in os.walk(os.path.join(img_root, 'data/images')) for file in files if file.lower().endswith(('.jpg', '.png', '.jpeg'))}
 
