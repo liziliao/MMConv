@@ -13,7 +13,7 @@ to obtain slot_values.json in the folder /resources.
 
 ### model training
 Example command: 
-```python train_rg.py {BATCH_SIZE}```
+```python train_dst.py {BATCH_SIZE}```
 
 Models are saved in checkpoint/, predictions saved in prediction
 
@@ -21,5 +21,5 @@ Or, you may simply run the train_dst.ipynb file.
 
 ### Training EfficientNet to get image predictions
 Put the images in data/images
-Run split_img.py to generate data splits, model_en.py to train efficientnet, note that the EMA weights are also saved
+Run split_img.py to generate data splits, train_en.py to train efficientnet, note that the EMA weights are also saved
 
