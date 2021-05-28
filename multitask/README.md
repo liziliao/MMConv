@@ -4,12 +4,12 @@ It corresponds to model in article *MMConv: an Environment for Multimodal Conver
 
 ### input generation
 ```python generate_inputs.py```
-The preprocessed inputs will be stored in folder /resources .
+The preprocessed inputs will be stored in folder /resources. Or you may directly run the blocks in generate_inputs.ipynb.
 
 ### model training
 ```sh train_multitask.sh $CUDA_VISIBLE_DEVICES $MODEL $MODEL_NAME $BATCH```
 
-You need to assign parameters above in the very sequence. Particularly, make sure $nproc_per_node, the number of GPUs used when training parallelly is not larger than number of $CUDA_VISIBLE_DEVICES. $MODEL is the name of model group used as backbone, and $MODEL_NAME is the name of specific model or the path to that model predownloaded.
+$MODEL is the name of model group used as backbone, and $MODEL_NAME is the name of specific model or the path to that model predownloaded.
 
 One runnable example is like this:
 ```sh train_multitask.sh 0,1,2,3 gpt2 gpt2 4```
