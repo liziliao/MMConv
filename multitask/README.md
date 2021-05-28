@@ -18,4 +18,4 @@ One runnable example is like this:
 ```python eval_simpletod.py $MODEL $BATCH $checkpoint```
 Here $checkpoint is one of model folder saved in ./checkpoints.
 
-Or simply run eval_simpletod.ipynb and assign  checkpoint number in the script.
+Or simply run eval_simpletod.ipynb and assign checkpoint number in the script.
