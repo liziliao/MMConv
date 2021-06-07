@@ -61,7 +61,7 @@ We organize the codes into separate folders for them. More details for training 
 ## Citation
 ```
 @inproceedings{{lizi2021mmconv,
-  title={MMConv: an Environment for Multimodal Conversational Search across Multiple Domains},
+  title={MMConv: An Environment for Multimodal Conversational Search across Multiple Domains},
   author={Liao, Lizi and Le Hong, Long and Zhang, Zheng and Huang, Minlie and Chua, Tat-Seng},
   booktitle={The 44th International ACM SIGIR Conference on Research and Development in Information Retrieval},
   year={2021}
