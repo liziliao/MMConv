@@ -9,7 +9,7 @@ The preprocessed inputs will be stored in folder /resources. Or you may directly
 ### model training
 ```sh train_multitask.sh $CUDA_VISIBLE_DEVICES $MODEL $MODEL_NAME $BATCH```
 
-$MODEL is the name of model group used as backbone, and $MODEL_NAME is the name of specific model or the path to that model predownloaded.
+$MODEL is the name of model group used as backbone, and $MODEL_NAME is the name of specific model or the path to that model pre-downloaded.
 
 One runnable example is like this:
 ```sh train_multitask.sh 0,1,2,3 gpt2 gpt2 4```
