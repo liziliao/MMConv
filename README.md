@@ -1,7 +1,7 @@
 
 
 
-# MMConv: an Environment for Multimodal Conversational Search across Multiple Domains
+# MMConv: An Environment for Multimodal Conversational Search across Multiple Domains
 Authors: [Lizi Liao](https://scholar.google.com.sg/citations?user=W2b08EUAAAAJ&hl=en), [Long Le Hong](https://github.com/LongLeCE), [Zheng Zhang](https://scholar.google.com.sg/citations?hl=en&user=S2bil1cAAAAJ), [Minlie Huang](https://scholar.google.com.sg/citations?hl=en&user=P1jPSzMAAAAJ), and [Tat-Seng Chua](https://scholar.google.com.sg/citations?hl=en&user=Z9DWCBEAAAAJ)
 
 ## Introduction
@@ -61,7 +61,7 @@ We organize the codes into separate folders for them. More details for training 
 ## Citation
 ```
 @inproceedings{{lizi2021mmconv,
-  title={MMConv: an Environment for Multimodal Conversational Search across Multiple Domains},
+  title={MMConv: An Environment for Multimodal Conversational Search across Multiple Domains},
   author={Liao, Lizi and Le Hong, Long and Zhang, Zheng and Huang, Minlie and Chua, Tat-Seng},
   booktitle={The 44th International ACM SIGIR Conference on Research and Development in Information Retrieval},
   year={2021}
