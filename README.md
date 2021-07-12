@@ -2,7 +2,7 @@
 
 
 # [MMConv](https://liziliao.github.io/papers/2021sigir_mmconv.pdf): An Environment for Multimodal Conversational Search across Multiple Domains
-Authors: [Lizi Liao](https://scholar.google.com.sg/citations?user=W2b08EUAAAAJ&hl=en), [Long Le Hong](https://github.com/LongLeCE), [Zheng Zhang](https://scholar.google.com.sg/citations?hl=en&user=S2bil1cAAAAJ), [Minlie Huang](https://scholar.google.com.sg/citations?hl=en&user=P1jPSzMAAAAJ), and [Tat-Seng Chua](https://scholar.google.com.sg/citations?hl=en&user=Z9DWCBEAAAAJ)
+Authors: [Lizi Liao](https://scholar.google.com.sg/citations?user=W2b08EUAAAAJ&hl=en), [Le Hong Long](https://github.com/LongLeCE), [Zheng Zhang](https://scholar.google.com.sg/citations?hl=en&user=S2bil1cAAAAJ), [Minlie Huang](https://scholar.google.com.sg/citations?hl=en&user=P1jPSzMAAAAJ), and [Tat-Seng Chua](https://scholar.google.com.sg/citations?hl=en&user=Z9DWCBEAAAAJ)
 
 ## Introduction
 This work introduces a Multimodal Multi-domain Conversational search (MMConv) environment. It provides a large-scale multi-turn conversational corpus with dialogues spanning across several domains and modalities. Along which, there are also paired real user settings, structured venue database, annotated image repository as well as crowd-sourced knowledge base. More importantly, each dialogue is fully annotated with a sequence of dialogue belief states and corresponding system dialogue acts which is scarce in existing multimodal conversation corpora. 
